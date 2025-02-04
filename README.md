@@ -1,6 +1,6 @@
-# Tailwind CSS Utilities for Prime UI Libraries
+# Unocss Utilities for Prime UI Libraries
 
-Extended utilities to integrate Prime UI library theming with Tailwind CSS and add the missing animation utilities from the legacy PrimeFlex.
+Extended utilities to integrate Prime UI library theming with Unocss and add the missing animation utilities from the legacy PrimeFlex.
 
 ## Prime UI Library
 
@@ -15,22 +15,24 @@ This plugin requires a Prime UI library with the next-gen theming, compatible wi
 Install the plugin from npm.
 
 ```sh
-npm i tailwindcss-primeui
+npm i unocss-primeui
 ```
 
-Add the plugin to your tailwind.config.js file.
+Add the plugin to your unocss.config.js file.
 
 ```js
-// tailwind.config.js
-module.exports = {
+// unocss.config.js
+import { defineConfig } from 'unocss';
+
+export default defineConfig({
     // ...
-    plugins: [require('tailwindcss-primeui')]
-};
+    presets: [require('unocss-primeui')]
+});
 ```
 
 ## Colors
 
-Prime UI libraries utilize a color palette that consists of primary colors and surfaces, these colors can be used as Tailwind extensions.
+Prime UI libraries utilize a color palette that consists of primary colors and surfaces, these colors can be used as Unocss extensions.
 
 ```html
 <div class="bg-primary text-primary-contrast border-primary-500">Content</div>
@@ -61,7 +63,7 @@ Special preset classes defined by the Prime UI library theme preset such as Aura
 
 ## Animations
 
-PrimeFlex provide various animation utilities that are missing in Tailwind CSS core, this plugin adds these plugins for migration.
+PrimeFlex provide various animation utilities that are missing in Unocss core, this plugin adds these plugins for migration.
 
 ### Duration
 
@@ -179,28 +181,28 @@ PrimeFlex provide various animation utilities that are missing in Tailwind CSS c
 
 ## Fade In and Out
 
-Values are derived from the Tailwind CSS opacity e.g. **fade-in-50** and **fade-out-20**. Arbitrary values such as **fade-in-[15]** are also supported.
+Values are derived from the Unocss opacity e.g. **fade-in-50** and **fade-out-20**. Arbitrary values such as **fade-in-[15]** are also supported.
 
 | fade-in-{value} | --p-enter-opacity: {value} |
 | fade-out-{value} | --p-leave-opacity: {value} |
 
 ## Zoom In and Out
 
-Values are derived from the Tailwind CSS scale e.g. **zoom-in-50** and **zoom-out-75**. Arbitrary values such as **zoom-in-[0.8]** are also supported.
+Values are derived from the Unocss scale e.g. **zoom-in-50** and **zoom-out-75**. Arbitrary values such as **zoom-in-[0.8]** are also supported.
 
 | zoom-in-{value} | --p-enter-scale: {value} |
 | zoom-out-{value} | --p-leave-scale: {value} |
 
 ## Spin In and Out
 
-Values are derived from the Tailwind CSS rotate e.g. **spin-in-45** and **spin-out-90**. Arbitrary values such as **spin-in-[60deg]** are also supported.
+Values are derived from the Unocss rotate e.g. **spin-in-45** and **spin-out-90**. Arbitrary values such as **spin-in-[60deg]** are also supported.
 
 | spin-in-{value} | --p-enter-rotate: {value} |
 | spin-out-{value} | --p-leave-rotate: {value} |
 
 ## Slide In and Out
 
-Values are derived from the Tailwind CSS translate e.g. **slide-in-from-t-50** and **slide-out-to-l-8**. Arbitrary values such as **slide-in-from-b-[8px]** are also supported.
+Values are derived from the Unocss translate e.g. **slide-in-from-t-50** and **slide-out-to-l-8**. Arbitrary values such as **slide-in-from-b-[8px]** are also supported.
 
 | slide-in-from-t-{value} | --p-enter-translate-y: -{value} |
 | slide-in-from-t-{value} | --p-enter-translate-y: {value} |
@@ -236,8 +238,10 @@ Any value within the square brackets allow defining one-off values that do not n
 The default values can be customized using as a theme extension.
 
 ```js
-// tailwind.config.js
-module.exports = {
+// unocss.config.js
+import { defineConfig } from 'unocss';
+
+export default defineConfig({
     theme: {
         extend: {
             animationDelay: {
@@ -250,6 +254,6 @@ module.exports = {
             }
         }
     },
-    plugins: [require('tailwindcss-primeui')]
-};
+    presets: [require('unocss-primeui')]
+});
 ```
