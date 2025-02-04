@@ -1,7 +1,7 @@
 {
-    "name": "tailwindcss-primeui",
+    "name": "unocss-primeui",
     "version": "0.4.0",
-    "description": "Utilities for Tailwind CSS",
+    "description": "Utilities for Unocss",
     "repository": {
         "type": "git",
         "url": "https://github.com/primefaces/tailwindcss-primevue.git"
@@ -21,10 +21,10 @@
         "format:check": "prettier --check \"**/*.js\""
     },
     "peerDependencies": {
-        "tailwindcss": ">=3.1.0"
+        "unocss": ">=3.1.0"
     },
     "devDependencies": {
         "prettier": "^2.8.8",
-        "tailwindcss": "^3.1.0"
+        "unocss": "^3.1.0"
     }
 }
