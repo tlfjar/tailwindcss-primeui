@@ -1,4 +1,4 @@
-module.exports = ({ matchUtilities, theme }) =>
+export default ({ matchUtilities, theme }) =>
     matchUtilities(
         {
             'animate-duration': (value) => ({

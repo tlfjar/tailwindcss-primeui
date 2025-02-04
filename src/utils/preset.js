@@ -1,4 +1,4 @@
-module.exports = ({ addUtilities }) =>
+export default ({ addUtilities }) =>
     addUtilities({
         '.border-surface': {
             'border-color': 'var(--p-content-border-color)'

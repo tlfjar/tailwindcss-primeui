@@ -1,4 +1,4 @@
-module.exports = ({ addUtilities }) =>
+export default ({ addUtilities }) =>
     addUtilities({
         '.animate-normal': {
             'animation-direction': 'normal'

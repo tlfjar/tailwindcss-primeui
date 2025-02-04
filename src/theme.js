@@ -2,7 +2,7 @@ const convert = (color) => {
     return `color-mix(in srgb, ${color} calc(100% * <alpha-value>), transparent)`;
 };
 
-module.exports = {
+export default {
     extend: {
         colors: {
             primary: convert('var(--p-primary-color)'),

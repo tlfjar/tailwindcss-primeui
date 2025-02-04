@@ -1,4 +1,4 @@
-module.exports = ({ addUtilities }) =>
+export default ({ addUtilities }) =>
     addUtilities({
         '.animate-ease-linear': {
             'animation-timing-function': 'linear'

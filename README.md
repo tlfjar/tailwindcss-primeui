@@ -23,10 +23,11 @@ Add the plugin to your unocss.config.js file.
 ```js
 // unocss.config.js
 import { defineConfig } from 'unocss';
+import { definePreset } from 'unocss-primeui';
 
 export default defineConfig({
     // ...
-    presets: [require('unocss-primeui')]
+    presets: [definePreset()]
 });
 ```
 
@@ -240,6 +241,7 @@ The default values can be customized using as a theme extension.
 ```js
 // unocss.config.js
 import { defineConfig } from 'unocss';
+import { definePreset } from 'unocss-primeui';
 
 export default defineConfig({
     theme: {
@@ -254,6 +256,6 @@ export default defineConfig({
             }
         }
     },
-    presets: [require('unocss-primeui')]
+    presets: [definePreset()]
 });
 ```

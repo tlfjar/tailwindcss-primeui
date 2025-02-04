@@ -1,4 +1,4 @@
-module.exports = ({ addUtilities, matchUtilities, theme }) => {
+export default ({ addUtilities, matchUtilities, theme }) => {
     addUtilities({
         '@keyframes enter': theme('keyframes.enter'),
         '@keyframes leave': theme('keyframes.leave'),
